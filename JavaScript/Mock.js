@@ -1,7 +1,7 @@
 function SpreadSheet(row, col) {
   this.row = row;
   this.col = col;
-  this.matrix = createMatrix(this.row, this.col);
+  this.matrix = createMatrix(row, col);
 
   function createMatrix (row, col) {
     const matrix = []
@@ -61,13 +61,13 @@ SpreadSheet.prototype.prettyPrint = function() {
 //   ))
 // }
 
-const createMatrix = (row, col) => {
-  const matrix = []
-  for (let i = 0; i < row; i++) {
-    matrix.push(new Array(col))
-  }
-  return matrix;
-}
+// const createMatrix = (row, col) => {
+//   const matrix = []
+//   for (let i = 0; i < row; i++) {
+//     matrix.push(new Array(col))
+//   }
+//   return matrix;
+// }
 
 const printMatrix = matrix => {
   for (let i = 0; i < matrix.length; i++) {
